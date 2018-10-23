@@ -8,8 +8,8 @@
     <ul>
         <li><a href="http://ipython.org/ipython-doc/stable/interactive/tutorial.html">IPython</a> é poderoso shell interativo para a linguagem Python, <span class="angry alert">muito</span> superior ao shell padrão</li>
         <li>As entradas e saídas são numeradas e você pode recuperar seus valores</li>
-        <li>É possível acessar os valores das entradas com variáveis <code>_i1</code>, <code>_i2</code>, etc</li>
-        <li>Os valores das saídas podem ser acessadas por <code>_1</code>, <code>_2</code>, onde <code>_</code>, <code>__</code> e <code>___</code> acessam a última, penúltima e antepenúltima saída</li>
+        <!-- <li>É possível acessar os valores das entradas com variáveis <code>_i1</code>, <code>_i2</code>, etc</li>
+             <li>Os valores das saídas podem ser acessadas por <code>_1</code>, <code>_2</code>, onde <code>_</code>, <code>__</code> e <code>___</code> acessam a última, penúltima e antepenúltima saída</li> -->
     </ul>
     <code-terminal><in>a = 10</in>
 <in>a + 4  # Esqueci de salvar em uma variável</in>
@@ -26,17 +26,17 @@
     <ul>
         <li>Um dos recursos mais úteis do IPython é <a href="http://ipython.readthedocs.io/en/stable/interactive/tutorial.html#tab-completion">completar um comando</a></li>
         <li>Após digitar parte do comando aperte <kbd>TAB</kbd> para completar</li>
-        <li>Caso haja mais de uma opção uma lista de opções será mostrada</li>
+        <!-- <li>Caso haja mais de uma opção uma lista de opções será mostrada</li> -->
         <img alt="TAB completion do IPython" src="images/ipython_tab_complete.png"/ class="displayed">
         <li>Também acessar o shell do sistema usando <code>!comando</code> (muito útil para alternar entre pastas, remover arquivos, etc)</li>
     </ul>
 
-    <div class="columns">
-        <code-terminal style="flex-basis: 65%;"><in>!pwd  # Mostra em que pasta estou agora</in>
-            <output>/home/darlan/</output>
-            <in>arquivos = !ls  # Lista arquivos na pasta atual</in></code-terminal>
-        <div class="angry box fragment" style="flex-basis: 35%; font-size:0.9em;">A variável <code>arquivos</code> é uma lista de nomes de arquivos que podemos processar em Python!</div>
-    </div>
+    <!-- <div class="columns">
+         <code-terminal style="flex-basis: 65%;"><in>!pwd  # Mostra em que pasta estou agora</in>
+         <output>/home/darlan/</output>
+         <in>arquivos = !ls  # Lista arquivos na pasta atual</in></code-terminal>
+         <div class="angry box fragment" style="flex-basis: 35%; font-size:0.9em;">A variável <code>arquivos</code> é uma lista de nomes de arquivos que podemos processar em Python!</div>
+         </div> -->
 
 </section>
 
@@ -64,10 +64,11 @@
 </section>
 
 <section>
-    <h2>IPython</h2>
+    <h2>Comandos Mágicos</h2>
 
     <ul style="height:600px !important;">
         <li>Outro recurso extremamente útil do IPython são os <a href="http://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magic-functions">comandos mágicos</a></li>
+        <li>Comandos mágicos começam com <code>%</code> e só funcionam no IPython</li>
         <li>Alguns dos comandos mágicos mais úteis são:
             <ul>
                 <li class="fragment highlight-current-happy" data-fragment-index="1"><tt>%whos</tt>: Lista variáveis e funções atuais <i class="fa fa-arrow-right"></i> exceto variáveis criadas pelo IPython
@@ -84,10 +85,10 @@ Variable   Type    Data/Info
 ----------------------------
 a          list    n=3</in></code-terminal>
                 </li>
-                <li class="fragment highlight-current-happy" data-fragment-index="2"><tt>%edit testando.py</tt>: Abre 'testando.py' e executa o código após sair
-                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>%edit testando.py
-Editing... Waiting for Emacs...</in></code-terminal></li>
-                <li class="fragment highlight-current-happy" data-fragment-index="3"><tt>%run testando.py</tt>: Executa testando.py como um script <span class="fragment highlight-current-happy" data-fragment-index="4"><i class="fa fa-arrow-right"></i> Também podemos passar opções como "-p" ou "-t"</span>
+                <!-- <li class="fragment highlight-current-happy" data-fragment-index="2"><tt>%edit testando.py</tt>: Abre 'testando.py' e executa o código após sair
+                     <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>%edit testando.py
+                     Editing... Waiting for Emacs...</in></code-terminal></li> -->
+                <li class="fragment highlight-current-happy" data-fragment-index="2"><tt>%run testando.py</tt>: Executa testando.py como um script
                     <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>%cat testando.py  # Vamos ver o conteúdo que salvei no arquivo
 a = 10
 b = 20
@@ -99,31 +100,8 @@ print(a * b)</in>
 Variable   Type    Data/Info
 ----------------------------
 a          int     10
-b          int     20</in></code-terminal>
-                    <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="4" dontshowcursor style="font-size: 85%;"><in>%run -p testando.py</in>
-Ordered by: internal time
-
-ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-2    0.000    0.000    0.000    0.000 {built-in method io.open}
-1    0.000    0.000    0.000    0.000 interactiveshell.py:2431(safe_execfile)
-1    0.000    0.000    0.000    0.000 {built-in method builtins.compile}
-2/1  0.000    0.000    0.000    0.000 {built-in method builtins.exec}
-1    0.000    0.000    0.000    0.000 py3compat.py:182(execfile)
-1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
-1    0.000    0.000    0.000    0.000 posixpath.py:318(normpath)
-1    0.000    0.000    0.000    0.000 posixpath.py:145(dirname)
-1    0.000    0.000    0.000    0.000 _bootlocale.py:23(getpreferredenco
-... ... ...</code-terminal></li>
-                <li class="fragment highlight-current-happy" data-fragment-index="5"><tt>%paste</tt>: Cola e executa um bloco de código da área de transferência</li>
-                <li class="fragment highlight-current-happy" data-fragment-index="6"><tt>%timeit</tt>: Executa uma expressão e mostra tempo decorrido
-                    <code-terminal class="show-only-if-current-fragment" dontshowcursor><in>%timeit 4 * 5
-100000000 loops, best of 3: 12.3 ns per loop</in></code-terminal></li>
-                <li class="fragment highlight-current-happy" data-fragment-index="7"><tt>%autocall</tt>: Dispensa os parêntesis em uma chamada de função
-                    <code-terminal class="show-only-if-current-fragment" dontshowcursor><in>sum [1,2,3]
--------> sum([1,2,3])</in>
-                            <output>6</output></code-terminal></li>
-
-                <li class="fragment highlight-current-happy" data-fragment-index="8"><tt>%quickref</tt>: Cartão de referência do IPython <i class="fa fa-arrow-right"></i> Veja também <tt>%comando?</tt></li>
+b          int     20</in></code-terminal></li>
+                <li class="fragment highlight-current-happy" data-fragment-index="3"><tt>%paste</tt>: Cola e executa um bloco de código da área de transferência</li>
             </ul>
         </li>
     </ul>

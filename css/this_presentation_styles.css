@@ -182,3 +182,23 @@ li>code, .box>code {
 .reveal .slides section .fragment.highlight-current-moody.current-fragment {
     color: var(--moody-dark-color);
 }
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+code.copyable:hover {
+    cursor: pointer;
+}
+code.copyable:hover:after {
+    position:absolute;
+    top: calc(-1em - 15px);
+    right:-10px;
+    bottom:0;
+
+    background-color: gray;
+    height: 1em;
+
+    padding: 10px 15px 10px 15px;
+    content: "Clique para copiar";
+    border-radius: 5px;
+}

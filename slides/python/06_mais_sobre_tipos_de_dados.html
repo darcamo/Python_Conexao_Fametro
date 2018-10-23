@@ -63,7 +63,7 @@ Cunha está atualmente preso</code-terminal></li>
     <ul>
         <li>É possível pegar um caractere de uma string
             com a notação <code>string[índice]</code></li>
-        <li>Índices em python começam em zero</li>
+        <li>Índices em Python começam em zero</li>
         <li class="fragment" data-fragment-index="1">Um índice negativo endereça <span class="happy alert">em sentido inverso</span> ou utilize <code>~</code></li>
         <li class="fragment" data-fragment-index="2">Podemos endereçar <span class="happy alert">fatias</span> (slices) com notação <code>[início:fim:passo]</code></li>
     </ul>
@@ -98,10 +98,10 @@ Cunha está atualmente preso</code-terminal></li>
     <div class="moody labeled box fragment">
         <div class="label">Exercício</div>
         <ul>
-            <li>Criem uma string</li>
-            <li>Peguem o terceiro caractere dela</li>
-            <li>Peguem o penúltimo caractere</li>
-            <li>Agora peguem do terceiro ao penúltimo caractere</li>
+            <li>Criar uma string</li>
+            <li>Pegar o terceiro caractere dela</li>
+            <li>Pegar o penúltimo caractere</li>
+            <li>Pegar do terceiro ao penúltimo caractere</li>
         </ul>
     </div>
 
@@ -225,7 +225,7 @@ Cunha está atualmente preso</code-terminal></li>
     <div class="moody labeled box">
         <div class="label">Exercício</div>
         <ul>
-            <li>Crie uma lista contendo o nome de 6 times de futebol ou outro esporte</li>
+            <li>Criar uma lista contendo o nome de 6 times de futebol ou outro esporte</li>
             <li>Para cada combinação de dois times imprima "Time1 x Time2"</li>
         </ul>
     </div>
@@ -240,7 +240,7 @@ Cunha está atualmente preso</code-terminal></li>
 
     <div class="happy labeled zeropadded box fragment">
         <div class="label">Solução</div>
-        <pre><code class="python" data-external="code/times_futebol1.py" data-trim></code></pre>
+        <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="code/times_futebol1.py" data-trim></code></pre>
     </div>
 </section>
 
@@ -252,13 +252,13 @@ Cunha está atualmente preso</code-terminal></li>
     <div class="moody labeled box">
         <div class="label">Exercício</div>
         <ul>
-            <li>Modifique o exercício anterior para que o nome de um dos times esteja em caixa alta (digamos que esse é o time anfitrião)</li>
+            <li>Modificar o exercício anterior para que o nome de um dos times esteja em caixa alta (digamos que esse é o time anfitrião)</li>
         </ul>
     </div>
 
     <div class="happy labeled zeropadded box fragment">
         <div class="label">Solução</div>
-        <pre><code class="python" data-external="code/times_futebol2.py" data-trim></code></pre>
+        <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="code/times_futebol2.py" data-trim></code></pre>
     </div>
 </section>
 
@@ -270,22 +270,23 @@ Cunha está atualmente preso</code-terminal></li>
     <div class="moody labeled box">
         <div class="label">Exercício</div>
         <ul>
-            <li>Modifique o exercício mais uma vez, mas agora após imprimir cada disputa, imprima o nome do time ganhador (escolhido aleatoriamente)</li>
+            <li>Modificar o exercício para, após imprimir cada disputa, imprimir
+            o nome do time ganhador (escolhido aleatoriamente)</li>
         </ul>
     </div>
 
     <div class="angry labeled box">
         <div class="label">Dica</div>
         <ul>
-            <li>Na primeira linha do programa coloquem <code>from random import choice</code></li>
-            <li>Descrubam o que a função <code>choice</code> faz colocando <code>choice?</code> no ipython</li>
+            <li>Na primeira linha do programa adicione <code>from random import choice</code></li>
+            <li>Descobrir o que a função <code>choice</code> faz colocando <code>choice?</code> no IPython</li>
         </ul>
     </div>
 
 
     <div class="happy labeled zeropadded box fragment">
         <div class="label">Solução</div>
-        <pre><code class="python" data-external="code/times_futebol3.py" data-trim></code></pre>
+        <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="code/times_futebol3.py" data-trim></code></pre>
     </div>
 </section>
 
@@ -347,7 +348,7 @@ Cunha está atualmente preso</code-terminal></li>
         <li>Podemos iterar sobre um dicionário com um <code>for</code></li>
         <li>use <code>d.items()</code> para retornar uma "lista de pares" de chave e valor que pode ser usada em um <code>for</code>, por exemplo</li>
     </ul>
-    <pre><code class="python" data-external="code/dicionario.py"></code></pre>
+    <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="code/dicionario.py"></code></pre>
 
     <div class="happy labeled zeropadded box">
         <div class="label">Exemplo</div>
@@ -367,21 +368,21 @@ número de ouro: 1.618</in></code-terminal>
     <div class="moody labeled box">
         <div class="label">Exercício</div>
         <ul>
-            <li>Vamos incrementar nosso programa sobre os times</li>
-            <li>No final do programa, exiba quantas vezes cada time ganhou</li>
+            <li>Incrementar nosso programa sobre os times</li>
+            <li>No final do programa, exibir quantas vezes cada time ganhou</li>
         </ul>
     </div>
 
     <div class="angry labeled box">
         <div class="label">Dica</div>
         <ul>
-            <li>Use um dicionário para armazenar quantas vezes cada time ganhou</li>
+            <li>Usar um dicionário para armazenar quantas vezes cada time ganhou</li>
         </ul>
     </div>
 
     <div class="happy labeled zeropadded box fragment">
         <div class="label">Solução</div>
-        <pre><code class="python" data-external="code/times_futebol4.py" data-trim></code></pre>
+        <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="code/times_futebol4.py" data-trim></code></pre>
     </div>
 
 

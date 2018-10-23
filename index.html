@@ -13,7 +13,7 @@
     <title>Introdução ao Python</title>
 
     <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/beige.css" id="theme">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/serif.css" id="theme">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link href="css/this_presentation_styles.css" rel="stylesheet" />
 
@@ -48,8 +48,8 @@
                 <p><span class="date">2018-10-26</span></p>
 
                 <div class="footnote hide-on-print" style="position:relative; width:100%; left: 0;">
-                    <span style="float:left; margin-left: 3em;">Aperte <kbd>e</kbd> para mudar para a "versão para impressão" (apenas no Chrome)</span>
-                    <span style="float:right; margin-right: 3em;">Aperte <kbd>?</kbd> para ajuda</span>
+                    <span style="float:left; margin-left: 3em;">Passe os slides com <kbd>SPC</kbd> ou <kbd>n</kbd>, use <kbd>p</kbd> para voltar.</span>
+                    <span style="float:right; margin-right: 3em;">Aperte <kbd>ESC</kbd> para um overview. <br>A tecla <kbd>?</kbd> mostra a ajuda</span>
                 </div>
             </section>
 
@@ -60,7 +60,7 @@
             <section data-external="slides/introdução_e_ferramentas/instalacao.html"></section>
             <section data-external="slides/introdução_e_ferramentas/degustacao.html"></section>
             <section data-external="slides/introdução_e_ferramentas/ipython.html"></section>
-            <section data-external="slides/introdução_e_ferramentas/jupyter_notebook.html"></section>
+            <!-- <section data-external="slides/introdução_e_ferramentas/jupyter_notebook.html"></section> -->
 
             <!-- A Linguagem Python -->
             <section data-external="slides/python/01_table_of_contents.html"></section>
@@ -71,9 +71,15 @@
             <section data-external="slides/python/06_mais_sobre_tipos_de_dados.html"></section>
             <section data-external="slides/python/07_funcoes.html"></section>
             <section data-external="slides/python/08_modulos_e_scripts.html"></section>
-            <section data-external="slides/python/09_exemplos_de_programas.html"></section>
+            <!-- <section data-external="slides/python/09_exemplos_de_programas.html"></section> -->
             <section data-external="slides/python/10_extra-tips.html"></section>
 
+            <section>
+                <h2>Apresentação disponível online</h2>
+
+                <div><a href="https://darcamo.github.io/Python_Conexao_Fametro">https://darcamo.github.io/Python_Conexao_Fametro</a></div>
+                <div id="qrcode" title="https://darcamo.github.io/Python_Conexao_Fametro">https://darcamo.github.io/Python_Conexao_Fametro</div>
+            </section>
 
             <!-- <section>
                  <h2>O que falar agora</h2>
@@ -105,6 +111,8 @@
          Since MathJax is loaded by revealjs, then this script must come before revealjs is initialized
     -->
     <script src="js/configure_mathjax.js"></script>
+    <script src="js/myfuncs.js"></script>
+    <script src="js/qrcode.js"></script>
 
     <script>
      // More info about config & dependencies:
@@ -116,6 +124,9 @@
 
          height: 900,
          width: 1600,
+
+         /* For 4:3 provide size: 908px 681px;. */
+         /* For 16:9 provide size: 1210px 681px; */
 
          //height: 768,
          //width: 1024,
@@ -254,9 +265,11 @@
                         },
          ]
      });
-    </script>
 
-    <!-- <script src="js/my_tests.js"></script> -->
+     window.addEventListener("load", function(event) {
+         prepare_qr_code();
+     });
+    </script>
 </body>
 
 </html>=

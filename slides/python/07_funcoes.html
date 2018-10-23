@@ -79,7 +79,7 @@
         <div class="happy labeled box fragment" data-fragment-index="1">
             <div class="label">Exemplo</div>
             <p>Uma função que calcule \(s = s_0+v_0 t + \frac{1}{2}a t^2\)</p>
-            <pre><code class="python" data-external="code/calc_s.py"></code></pre>
+            <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="code/calc_s.py"></code></pre>
         </div>
 
         <!-- <li>Considere a função que retorna a posição de um
@@ -110,7 +110,7 @@
         <li class="fragment">Se houverem multiplos
             parâmetros via posição e nome use os dois
             prefixos
-            <pre><code class="python" data-external="./code/function_def.py"></code></pre></li>
+            <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="./code/function_def.py"></code></pre></li>
     </ul>
 
     <code-terminal dontshowcursor class="fragment"><in>my_func(1, 2, 3, "e", "já",  modelo="Fusca", cor="Amarelo")</in>
@@ -121,69 +121,61 @@
 </section>
 
 
-<section>
-    <h2>Observação sobre valor padrão</h2>
+<!-- <section>
+     <h2>Observação sobre valor padrão</h2>
 
-    <ul>
-        <li>Qual o problema do código abaixo?</li>
-        <li class="fragment">Vamos rodar no IPython e ver o que acontece</li>
-    </ul>
+     <ul>
+     <li>Qual o problema do código abaixo?</li>
+     <li class="fragment">Vamos rodar no IPython e ver o que acontece</li>
+     </ul>
 
-    <pre><code>def append_valor(*values, l=[]):
-    """Adiciona o valor 'v' no final da lista 'l'"""
-    l.extend(values)
-    return l</code></pre>
+     <pre><code class="copyable python" onclick="copyCodeOnClick(this)">def append_valor(*values, l=[]):
+     """Adiciona o valor 'v' no final da lista 'l'"""
+     l.extend(values)
+     return l</code></pre>
 
-    <div class="angry labeled box fragment" style="margin-top:3em; margin-bottom:3em;">
-        <div class="label">Importante</div>
-        Não use tipos mutáveis como valor padrão de argumentos
-    </div>
+     <div class="angry labeled box fragment" style="margin-top:3em; margin-bottom:3em;">
+     <div class="label">Importante</div>
+     Não use tipos mutáveis como valor padrão de argumentos
+     </div>
 
-</section>
-
-
-<section>
-    <h2>Exercício de Fixação</h2>
-
-    <div class="moody labeled box">
-        <div class="label">Exercício</div>
-        <ul>
-            <li>Crie uma função que recebe duas listas e retorne uma lista contendo a soma elemento-a-elemento das duas listas (assuma que as duas listas possuem o mesmo número de elementos)</li>
-        </ul>
-    </div>
-
-    <div class="happy labeled zeropadded box fragment">
-        <div class="label">Solução</div>
-        <pre><code class="python" data-external="./code/soma_duas_listas.py"></code></pre>
-    </div>
-
-    <!-- <div class="happy labeled box fragment">
-         <div class="label">Pesquisa de opinião</div>
-         Qual das soluções é melhor?
-         </div> -->
+     </section> -->
 
 
+<!-- <section>
+     <h2>Exercício de Fixação</h2>
+
+     <div class="moody labeled box">
+     <div class="label">Exercício</div>
+     <ul>
+     <li>Crie uma função que recebe duas listas e retorne uma lista contendo a soma elemento-a-elemento das duas listas (assuma que as duas listas possuem o mesmo número de elementos)</li>
+     </ul>
+     </div>
+
+     <div class="happy labeled zeropadded box fragment">
+     <div class="label">Solução</div>
+     <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="./code/soma_duas_listas.py"></code></pre>
+     </div>
+
+     </section> -->
 
 
-</section>
+<!-- <section>
+     <h2>Exercício de Fixação</h2>
 
+     <div class="moody labeled box">
+     <div class="label">Exercício</div>
+     <ul>
+     <li>E se as listas tiverem tamanhos diferentes?</li>
+     <li>Considere que a lista menor possui zeros no final</li>
+     </ul>
+     </div>
 
-<section>
-    <h2>Exercício de Fixação</h2>
-
-    <div class="moody labeled box">
-        <div class="label">Exercício</div>
-        <ul>
-            <li>E se as listas tiverem tamanhos diferentes?</li>
-            <li>Considere que a lista menor possui zeros no final</li>
-        </ul>
-    </div>
-
-    <div class="happy labeled zeropadded box fragment">
-        <div class="label">Solução</div>
-        <pre><code class="python" data-external="./code/soma_duas_listas2.py"></code></pre>
-    </div>
-</section>
+     <div class="happy labeled zeropadded box fragment">
+     <div class="label">Solução</div>
+     <pre><code class="python copyable" onclick="copyCodeOnClick(this)" data-external="./code/soma_duas_listas2.py"></code></pre>
+     </div>
+     </section> -->
 
 
 <section>
@@ -204,4 +196,17 @@
 <in>f(4)</in>
 <output>16</output></code-terminal></li>
     </ul>
+</section>
+
+
+<section>
+    <h2>Funções Anônimas: lambda functions</h2>
+    <h3>Alguns exemplos úteis</h3>
+
+    <code-terminal dontshowcursor><in>l = [6, -6, 4, 9, -2, 6, -7, 3, 9, 9, 6, -1, -9, -3, -9]</in>
+        <in>list(filter(lambda x: x > 0, l))</in>
+        <output>[6, 4, 9, 6, 3, 9, 9, 6]</output>
+        <span class="fragment"><in>list(map(lambda x: x*x, l))</in>
+            <output>[36, 36, 16, 81, 4, 36, 49, 9, 81, 81, 36, 1, 81, 9, 81]</output></code-terminal></span>
+
 </section>
