@@ -1,0 +1,70 @@
+
+<section id="tipos_primitivos">
+    <h1 style="margin-bottom: 0px;">Tipos Primitivos em Python</h1>
+    <p style="margin: 0px; padding: 0px;"><small>Tipos já embutidos no núcleo da linguagem</small></p>
+</section>
+
+<section>
+    <h2>Tipos Simples</h2>
+    <!-- <div style="display:flex; align-items: center;"> -->
+
+    <div class="moody labeled zeropadded box">
+        <div class="label">Exemplos de tipos simples</div>
+        <pre><code class="python" data-external="code/tipos_primitivos.py"></code></pre>
+    </div>
+
+
+
+    <ul>
+        <li>Em um terminal, utilize "<code>type</code>" para determinar o tipo de uma variável
+        </li>
+    </ul>
+    <code-terminal><in>type(peso)</in>
+float
+<in>type(peso_int)</in>
+<output>int</output>
+<in>type(nome)</in>
+<output>str</output></code-terminal>
+</section>
+
+<section>
+    <h2>Tipos Compostos (contêineres)</h2>
+
+    <div class="moody labeled zeropadded box">
+        <div class="label">Exemplos de tipos compostos</div>
+        <pre><code class="python" data-external="code/tipos_compostos.py"></code></pre>
+    </div>
+    <ul>
+        <li>Python possui várias estruturas de dados flexíveis como listas, tuplas, dicionários e conjuntos</li>
+        <li>Podemos armazenar valores de diferentes tipos nesses contêineres</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Variáveis em Python</h2>
+
+    <div class="angry labeled box">
+        <div class="label">Observação</div>
+        <ul>
+            <li>Variáveis não são caixas em Python, mas sim <span class="angry alert">labels</span></li>
+            <li>A qualquer momento um label pode ser associado a um objeto diferente</li>
+            <li>Múltiplos labels podem estar associados ao mesmo objeto</li>
+        </ul>
+    </div>
+
+    <code-terminal dontshowcursor><in class="fragment">a = [1, 2, 3]  # Cria um objeto (uma lista) e associa ao label 'a'</in>
+        <in class="fragment">b = a  # Associa a lista com um outro label, 'b' -> não há cópia!</in>
+        <span class="fragment"><in>a is b  # a e b não são apenas duas listas iguais, eles são o mesmo objeto</in>
+            <output>True</output></span>
+        <in class="fragment">a[0] = 100  # Modifica o objeto chamado de 'a'</in>
+            <in class="fragment">print(b)  # 'b' foi modificado pois é o mesmo objeto de 'a'
+[100, 2, 3]</in>
+        <in class="fragment">a = [100, 2, 3]  # Cria um novo objeto e associa ao label 'a'</in>
+        <span class="fragment"><in>a == b  # Atualmente os objetos referenciados por 'a' e 'b'</in>
+            <output>True</output>
+            <in>a is b  # ... mas eles não são o mesmo objeto -> Podemos mudar um sem mudar o outro</in>
+            <output>False</output>
+        </span></code-terminal>
+
+</section>

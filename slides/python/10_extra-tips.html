@@ -1,0 +1,81 @@
+
+<section id="dicas_extras">
+    <h1>Dicas Extras</h1>
+</section>
+
+<section>
+        <h2>Dicas Extras</h2>
+        <ul>
+            <li>Escrever código correto nem sempre é uma tarefa fácil</li>
+            <li>Como achamos o problema em um código complexo?
+                <ul class="fragment">
+                    <li>Utilizar print em diversos pontos</li>
+                    <li>Utilizar um debugger</li>
+                </ul></li>
+            <li class="fragment">E como evitamos introduzir novos erros em um programa que está funcionando?
+                <ul>
+                    <li class="happy alert">Unit tests</li>
+                </ul></li>
+        </ul>
+</section>
+
+<!-- <section>
+     <h2>Debugando código python</h2>
+     <ul>
+     <li>Falar do pudb</li>
+     <li>falar do spyder</li>
+     </ul>
+     </section> -->
+
+
+<section>
+        <h2>Unit Tests</h2>
+
+        <div class="happy labeled box">
+            <div class="label">Definição</div>
+            Tipo particular de testes correspondendo a menor parte <em>testável</em> de um programa
+        </div>
+
+        <div class="moody labeled box fragment">
+            <div class="label">Características</div>
+            <ul>
+                <li>Idealmente cada unidade de teste deve ser independente das demais</li>
+                <li>Cada teste deve poder rodar de maneira isolada ou como parte de uma <em>suíte de testes</em>
+                    <ul>
+                        <li>A ordem de execução dos testes <span class="angry alert">não deve importar</span></li>
+                        <li>Cada teste deve importar seu próprio conjunto de dados independentes dos demais testes</li>
+                    </ul></li>
+            </ul>
+        </div>
+
+        <div class="angry labeled box fragment">
+            <div class="label">Importante</div>
+            <ul>
+                <li>Os testes devem rodar rapidamente e de maneira automatizada</li>
+                <li>Ao identificar um bug no seu programa, crie um teste que reproduza o bug só então conserte o bug <span class="happy alert fragment"><i class="fa fa-arrow-right"></i> quando o teste passar o bug foi corrigido</span></li>
+            </ul>
+        </div>
+</section>
+
+
+<section>
+        <h2>Unit Tests</h2>
+        <h3>O módulo unittests do Python</h3>
+        <ul>
+            <li>Python possui o módulo <code>unittests</code></li>
+        </ul>
+
+        <div class="moody labeled zeropadded box">
+            <div class="label">Estrutura básica para testes</div>
+            <pre><code class="python" data-external="code/unittest_basic.py"></code></pre>
+        </div>
+
+        <div class="happy labeled box fragment">
+            <div class="label">Nota</div>
+            Vejam mais na <a href="https://docs.python.org/3/library/unittest.html">documentação do módulo unittest</a>
+        </div>
+
+
+
+
+</section>

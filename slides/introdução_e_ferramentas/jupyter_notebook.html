@@ -1,0 +1,90 @@
+<section>
+    <h1>Jupyter Notebook</h1>
+</section>
+
+<section>
+    <h2>O que é o Jupyter Notebook</h2>
+
+    <ul>
+        <li>Um notebook é um documento único contendo várias "células" de entrada e de saída</li>
+        <li>Surgiu inicialmente como IPython Notebook, inspirado pelo Mathematica</li>
+        <li class="fragment">Pode ser instalado pelo Anaconda</li>
+        <li class="fragment">Cada notebook quando aberto está associado a um <span class="happy alert">kernel</span></li>
+        <li class="fragment">Pode ser usado online em <a href="https://try.jupyter.org">https://try.jupyter.org</a></li>
+        <li class="fragment"><a href="https://nbviewer.jupyter.org/">nbviewer</a>: Site com vários notebooks interessantes, como por exemplo <a href="https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb">esse aqui</a></li>
+    </ul>
+
+    <div class="happy labeled box fragment">
+        <div class="label">Vamos tentar agora</div>
+        Rodem o comando <code>jupyter notebook</code> para iniciar
+    </div>
+</section>
+
+<section>
+    <h2>Dashboard</h2>
+
+    <ul>
+        <li>Ao executar o notebook uma aba do navegador é aberta com o dashboard</li>
+        <li>Vemos os arquivos na pasta onde o comando <code>jupyter notebook</code> foi executado</li>
+        <img alt="" src="images/jupyter_dashboard.png" class="displayed" style="border:none; max-width:100%; max-height: 20%;"/>
+    </ul>
+</section>
+
+<section>
+    <h2>Editor</h2>
+
+    <ul>
+        <li>No dashboard, cliquem em "New" e escolham o kernel indicado como Python3 para criar um novo notebook</li>
+        <li class="fragment happy alert">Executar o tour pela interface em "Help <i class="fa fa-arrow-right"></i> User Interface Tour" </li>
+        <li class="fragment">As células podem ser de dois tipos: markdown e code</li>
+        <li class="fragment">Células do tipo "markdown" contém texto que é renderizado usando a <a href="https://daringfireball.net/projects/markdown/syntax">notação markdown</a></li>
+        <li class="fragment">Células do tipo "code" contém código que será executado, possivelmente resultando em alguma saída mostrada abaixo</li>
+        <li class="fragment">Em alguns casos a saída será mostrada em um <span class="happy alert">formato mais apropriado</span></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Vamos experimentar o notebook</h2>
+    <div class="moody labeled box">
+        <div class="label">Exercício</div>
+        <ul>
+            <li>Crie uma célula markdown contendo texto com alguma formatação em markdown</li>
+            <li>Uma célula (código) abaixo definindo duas variáveis com números</li>
+            <li>Crie uma célula abaixo somando as duas variáveis</li>
+            <li>Faça um "merge" das duas células anteriores</li>
+            <li>Crie uma célula vazia</li>
+            <li>Delete a célula vazia recém criada</li>
+        </ul>
+    </div>
+
+    <div class="happy labeled box fragment">
+        <div class="label">Dica</div>
+        vale a pena aprender os principais atalhos de teclado
+    </div>
+
+</section>
+
+<section>
+    <h2>O que o Notebook tem a mais que o IPython</h2>
+    <ul>
+        <li>O editor do Jupyter possui algumas melhorias que não são possíveis em um terminal</li>
+        <ul>
+            <li class="fragment"><code>obj?</code> mostra informações do objeto em um <em>pager</em></li>
+            <li class="fragment"><kbd>Shift</kbd>+<kbd>TAB</kbd> em uma função mostra a <span class="angry alert">docstring</span> da função em um popup
+                <ul>
+                    <li>Pressione uma vez para mostrar o popup, duas para expandir, três para manter o popup por 10 segundos enquanto você digita, e quatro fixar a informação</li>
+                </ul>
+            </li>
+            <li class="fragment"><span class="happy alert">Rich Display System</span>: Estende o método nativo <code>__repr__</code> do Python para outras representações e o notebook vai escolher a mais apropriada
+                <ul><li>Representações possíveis: HTML, JSON, PNG, JPEG, SVG, LaTeX</li></ul>
+                <div class="happy labeled box fragment">
+                    <div class="label">Exemplo</div>
+                    <ul>
+                        <li>A biblioteca <a href="https://www.sympy.org/pt/index.html">sympy</a> para computação simbólica vai exibir equações renderizadas</li>
+                        <li>A biblioteca <a href="https://pandas.pydata.org/">pandas</a> mostra resultados como tabelas em HTML, etc</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </ul>
+</section>

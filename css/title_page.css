@@ -1,0 +1,33 @@
+
+.reveal .title {
+    font-size: 3.3em;
+    /* color:#606060; */
+    font-weight:bold;
+    letter-spacing:0.05em;
+    /* text-shadow: 6px 6px #aaaaaa; */
+}
+
+.reveal .author {
+    font-size: 1.4em;
+    /* color:#606060; */
+    font-weight:bold;
+    letter-spacing:0.02em;
+}
+
+/* .coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em} */
+
+
+.reveal .institution {
+    font-size: 1.0em;
+}
+.reveal .date {
+    font-size: 1.0em;
+    font-style: italic;
+}
+
+/* .reveal .footnote { */
+/*     position:absolute; */
+/*     bottom: 1em; */
+/*     left: 5%; */
+/*     font-size: 0.7em; */
+/* } */

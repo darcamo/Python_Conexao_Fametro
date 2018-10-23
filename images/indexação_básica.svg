@@ -1,0 +1,48 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="180px" width="300px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-0.5 -0.5 301 181">
+    <style>
+
+    </style>
+    <!-- <rect x="0" y="0" width="300" height="180" fill="#eee"></rect> -->
+    <g stroke-width="1" font-size="25px" font-family="sans-serif" text-anchor="middle">
+        <g>
+          <rect height="60" width="60" stroke="#000" y="0" x="0" fill="white"/>
+          <rect height="120" width="60" stroke="#000" y="60" x="0" fill="white"/>
+            <text y="30" x="30" dominant-baseline="central" font-size="35px">a</text>
+            <text y="80" x="30" dominant-baseline="central">0</text>
+            <text y="120" x="30" dominant-baseline="central">-5</text>
+            <text y="160" x="30" dominant-baseline="central">~4</text>
+        </g>
+        <g transform="translate(60 0)">
+          <rect height="60" width="60" stroke="#000" y="0" x="0" fill="white"/>
+          <rect height="120" width="60" stroke="#000" y="60" x="0" fill="white"/>
+            <text y="30" x="30" dominant-baseline="central" font-size="35px">b</text>
+            <text y="80" x="30" dominant-baseline="central">1</text>
+            <text y="120" x="30" dominant-baseline="central">-4</text>
+            <text y="160" x="30" dominant-baseline="central">~3</text>
+        </g>
+        <g transform="translate(120 0)">
+          <rect height="60" width="60" stroke="#000" y="0" x="0" fill="white"/>
+          <rect height="120" width="60" stroke="#000" y="60" x="0" fill="white"/>
+            <text y="30" x="30" dominant-baseline="central" font-size="35px">c</text>
+            <text y="80" x="30" dominant-baseline="central">2</text>
+            <text y="120" x="30" dominant-baseline="central">-3</text>
+            <text y="160" x="30" dominant-baseline="central">~2</text>
+        </g>
+        <g transform="translate(180 0)">
+          <rect height="60" width="60" stroke="#000" y="0" x="0" fill="white"/>
+          <rect height="120" width="60" stroke="#000" y="60" x="0" fill="white"/>
+            <text y="30" x="30" dominant-baseline="central" font-size="35px">d</text>
+            <text y="80" x="30" dominant-baseline="central">3</text>
+            <text y="120" x="30" dominant-baseline="central">-2</text>
+            <text y="160" x="30" dominant-baseline="central">~1</text>
+        </g>
+        <g transform="translate(240 0)">
+          <rect height="60" width="60" stroke="#000" y="0" x="0" fill="white"/>
+          <rect height="120" width="60" stroke="#000" y="60" x="0" fill="white"/>
+            <text y="30" x="30" dominant-baseline="central" font-size="35px">e</text>
+            <text y="80" x="30" dominant-baseline="central">4</text>
+            <text y="120" x="30" dominant-baseline="central">-1</text>
+            <text y="160" x="30" dominant-baseline="central">~0</text>
+        </g>
+    </g>
+</svg>

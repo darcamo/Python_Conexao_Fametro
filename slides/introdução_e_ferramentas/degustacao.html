@@ -1,0 +1,70 @@
+<section>
+    <h1>Saboreando um pouquinho de Python</h1>
+</section>
+
+<section>
+    <h2>O que esse programa faz?</h2>
+    <pre><code class="python" data-external="code/fizzbuzz.py"></code></pre>
+    <ul>
+        <li>Escrevam o código abaixo em um editor de texto e rodem o comando <code>python nome_do_arquivo.py</code></li>
+        <li class="fragment" data-fragment-index="1">A função <code>range</code> cria uma "lista" de elementos
+            <ul class="fragment" data-fragment-index="1">
+                <li><code>range(5)</code> vai criar de 0 a 4</li>
+            </ul></li>
+        <li class="fragment" data-fragment="1">O "<code>for</code>" em python itera em cada elemento de um <em>contêiner</em></li>
+        <li class="fragment">Não precisamos de parêntesis para as condições</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Exercício <span class="fragment" data-fragment-index="2">Resolvido</span></h2>
+    <ul>
+            <li>Escrever um programa que receba um número e imprime seu fatorial</li>
+            <li>Dica: Use a função input para receber uma entrada do teclado</li>
+            <!-- <li class="happy alert fragment">Solução:
+                 <pre><code class="class" data-external="code/fatorial.py"></code></pre>
+                 </li> -->
+        </ul>
+
+        <div class="angry labeled box fragment" data-fragment-index="1">
+            <div class="label">Como assim execício?</div>
+            Só teve um slide mostrando um pouco de Python e você já quer passar um exercício?
+        </div>
+
+        <div class="happy zeropadded labeled box fragment" data-fragment-index="2">
+            <div class="label">Solução</div>
+            <pre><code class="class" data-external="code/fatorial.py"></code></pre>
+        </div>
+
+        <!-- <div class="moody labeled box">
+             <div class="label">Solução</div>
+             <pre><code class="class" data-external="code/fatorial.py"></code></pre>
+             </div> -->
+</section>
+
+
+<section>
+    <h2>Exercício Resolvido</h2>
+    <ul>
+        <li>Escrevam um programa em python que receba 3 números
+            que correspondem aos coeficientes da equação $ax^2 + bx + c = 0$ e retorna suas raízes</li>
+        <span class="fragment">
+            <div class="moody labeled box" style="font-size: 0.9em;">
+                <div class="label">Solução Matemática utilizando a fórmula de Báskara</div>
+                <ul>
+                    <li>$x_1 = (-b + \sqrt{\Delta})/(2a)$</li>
+                    <li>$x_2 = (-b - \sqrt{\Delta})/(2a)$</li>
+                    <li>$\Delta = b^2 - 4ac$ <span style="float:right; font-size: 0.8em;">(Note que $\Delta$ deve ser positivo para as raízes serem reais)</span> </li>
+                </ul>
+            </div>
+        </span>
+        <li class="fragment">Um possível programa em python seria
+            <pre><code class="python" data-external="code/baskara.py"></code></pre>
+        </li>
+    </ul>
+    <!-- <div class="happy zeropadded labeled box fragment">
+         <div class="label">Um possível programa em python</div>
+         <pre><code class="python" data-external="code/baskara.py"></code></pre>
+         </div> -->
+</section>

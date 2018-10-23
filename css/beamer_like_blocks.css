@@ -1,0 +1,224 @@
+/* Here I put some css code that I have created myself for things similar to
+   block/alert block in beamer */
+
+:root {
+    /* Define some variables for the colors */
+    --angry-dark-color: #C43C35;
+    --angry-light-color: #FFD7D5;
+    --moody-dark-color: #F89406;
+    --moody-light-color: #FFECD1;
+    --happy-dark-color: #46a546;
+    --happy-light-color: #C0E0C0;
+
+    /* Defined some variables for paddings, margins, etc. of the boxes */
+    --box-vertical-margin: 15px; /* Default margin for top and bottom of box class */
+    --box-vertical-padding: 0.5em;
+    --box-horizontal-padding: 1em;
+    --label-top-shift: 0.7em;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* Add footnote class to make something a footnote */
+.reveal .footnote {
+    opacity: 0.5;
+    position:absolute;
+    bottom: 0;
+    font-size: 0.5em;
+    left: 5%;
+}
+
+/* Add the hide-on-print class and the thing will not be included during print
+   Note that the class print-pdf is automatically added by reveal*/
+.print-pdf .hide-on-print {
+    opacity: 0;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/* use inverse class in a slide to make it a "splash slide" with black
+   background and white text */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* .inverse { */
+/*     background: #272822; */
+/*     color: #f3f3f3; */
+/*     text-shadow: 0 0 20px #333; */
+/* } */
+
+/* .inverse p { */
+/*     font-size: 1.5em; */
+/*     line-height: 1.5em; */
+/* } */
+
+/* .inverse h1, .inverse h2 { */
+/*     color: #f3f3f3; */
+/* } */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* Add 'box' class as well as any of ['angry'|'moody'|'happy'] class to a div to
+   make it a block similar to Beamer blocks. Inside this div add a span with the
+   'label' class for the block name and after that add a paragraph for the
+   actual text. */
+div.box/* , code */ {
+    border-radius: 10px;
+    padding: var(--box-vertical-padding) var(--box-horizontal-padding) var(--box-vertical-padding) var(--box-horizontal-padding);
+    /* border: 1px solid #ccc; */
+    margin-top: var(--box-vertical-margin);  /* Set as the amount the label is shifted up */
+    margin-bottom: var(--box-vertical-margin);
+    /* font-size: 0.9em; */
+    text-align: left;
+    color: black;
+}
+
+.labeled {
+    position: relative;
+}
+
+/* .labeled .label { */
+/*     position: absolute; */
+/*     top: -1em; */
+/* } */
+
+div.box.labeled {
+    margin-top: calc(var(--box-vertical-margin) + var(--label-top-shift) / 1.6);          /*Add some top margin to account for the label (which has absolute positioning */
+    padding-top: var(--label-top-shift);/* 0.9em; */         /* Just some extra padding to move the content down a bit to account the label */
+}
+
+/* The box content must be either a ul or a p */
+div.box p, div.box ul {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.box pre {
+    margin: 0;
+    width: 100%;
+}
+
+.labeled .label {
+    position: absolute;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px 0.5em 5px 0.5em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 0.75em;
+    /* left: 10px; */
+    top: calc(-1 * var(--label-top-shift));
+}
+
+.angry.box {
+    background-color: var(--angry-light-color);
+    /* border-color: var(--angry-dark-color); */
+}
+.happy.box {
+    background-color: var(--happy-light-color);
+    /* border-color: var(--happy-dark-color); */
+}
+.moody.box {
+    background-color: var(--moody-light-color);
+    /* border-color: var(--happy-dark-color); */
+}
+.moody .label {
+    background-color: var(--moody-dark-color);
+}
+.happy .label {
+    background-color: var(--happy-dark-color);
+}
+.angry .label {
+    background-color: var(--angry-dark-color);
+}
+
+/* The alert class does not exist alone */
+.moody.alert {
+    color: var(--moody-dark-color);
+}
+.happy.alert {
+    color: var(--happy-dark-color);
+}
+.angry.alert {
+    color: var(--angry-dark-color);
+}
+
+/* Add the zeropadded class to the same div that has the box class -> Useful to add a pre block inside a labeled box */
+.zeropadded {
+    padding: 0 !important;
+}
+.zeropadded.labeled {
+    margin-top: calc(var(--box-vertical-margin) + 1em) !important;
+}
+.box.zeropadded .label {
+    top: calc(-1 * (var(--box-vertical-margin) + 1em));
+    left: var(--box-horizontal-padding);
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* Labeled pre blocks */
+/* Add the labeled class to a pre block */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* Code for two columns */
+
+/* Create a div with the 'columns' class and inside it put divs with the
+   'column' class. You can set the style of the column divs to something such as
+   style="flex-basis: 50%" to control the width.
+*/
+/* See https://stackoverflow.com/questions/36342921/specifing-width-of-a-flexbox-flex-item-width-or-basis */
+.columns {
+    display: flex;
+}
+
+.column{
+    flex: 1;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* Code for captioned figures */
+/* Put anything that should have a caption inside a parent container with this
+   class*/
+/* .captionbox { */
+/*     display: inline-block; */
+/*     position: relative; */
+/*     /\* padding: 8px 8px 8px 8px;  *\/ */
+/*     /\* background-color: #eeeeee; *\/ */
+/* } */
+
+/* /\* For some reason the image is being inserted inside a paragraph, but we don't want the margin from it *\/ */
+/* .captionbox > p { */
+/*     margin-top: 0; */
+/*     margin-bottom: 0; */
+/* } */
+
+/* .captionbox img { */
+/*     height: 380px; /\* All images we add with a caption will have this fixed width *\/ */
+/*     /\* margin-left: auto; *\/ /\* Both margin as auto will center the image *\/ */
+/*     /\* margin-right: auto; *\/ */
+/*     display: block; */
+/*     margin-right: 16rem;  /\* Shift the image left to leave some space for caption *\/ */
+/* } */
+
+/* /\* Add this class to the caption text that you add inside the .captionbox *\/ */
+/* .caption { */
+/*     position: absolute; */
+/*     display: inline-block; */
+/*     font-size:90%; */
+/*     width: 14rem;  /\* We left 15rem as space for caption. We set its width to 13... *\/ */
+/*     right: 1rem;   /\* and we shift the caption to the left by 1rem*\/ */
+/*     top: 45%;  /\* This combined with translateY will vertically center the caption *\/ */
+/*     transform: translateY(-50%); */
+/*     text-align: center; */
+/* } */
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/

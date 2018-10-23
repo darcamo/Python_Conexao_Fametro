@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Note: Uncomment the line bellow to automatically refrech the page on file changes. With this you can use, for instance, "python -m http.server 8000" to serve the presentation during development.
+             DO NOT LEAVE this line in the final version -->
+    <!-- <script type="text/javascript" src="http://livejs.com/live.js"></script> -->
+    <!-- Another alternative is to use the livereload python program. Then you don't need this -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Introdução ao Python</title>
+
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/beige.css" id="theme">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="css/this_presentation_styles.css" rel="stylesheet" />
+
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <!-- animate.css does not fully work on reveal.js -> google how to do it -->
+    <link rel="stylesheet" href="css/beamer_like_blocks.css">
+    <link rel="stylesheet" href="css/title_page.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+
+    <!-- My custom polymer element with a terminal and inside python code -->
+    <!-- <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+         <script type="module" src="my_polymer_elements/ipython-terminal.js"></script> -->
+
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- My custom polymer element with a terminal and inside python code -->
+    <link rel="import" href="./my_polymer_elements/terminal-tag.html">
+    <link rel="import" href="./my_polymer_elements/code-terminal.html">
+    <link rel="import" href="./my_polymer_elements/cursor-tag.html">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Introdução ao Python</h1>
+                <p><span class="author">Darlan Cavalcante Moreira<br>
+                        <a href="mailto:darcamo@gmail.com">darcamo@gmail.com</a></span></p>
+                <p><span class="institution"><a href="https://www.gtel.ufc.br">GTEL</a></span></p>
+                <p><span class="date">2018-10-26</span></p>
+
+                <div class="footnote hide-on-print" style="position:relative; width:100%; left: 0;">
+                    <span style="float:left; margin-left: 3em;">Aperte <kbd>e</kbd> para mudar para a "versão para impressão" (apenas no Chrome)</span>
+                    <span style="float:right; margin-right: 3em;">Aperte <kbd>?</kbd> para ajuda</span>
+                </div>
+            </section>
+
+            <!-- <section data-external="bla_bla_bla.html"></section> -->
+
+            <!-- introcução e Ferramentas -->
+            <section data-external="slides/introdução_e_ferramentas/introduction.html"></section>
+            <section data-external="slides/introdução_e_ferramentas/instalacao.html"></section>
+            <section data-external="slides/introdução_e_ferramentas/degustacao.html"></section>
+            <section data-external="slides/introdução_e_ferramentas/ipython.html"></section>
+            <section data-external="slides/introdução_e_ferramentas/jupyter_notebook.html"></section>
+
+            <!-- A Linguagem Python -->
+            <section data-external="slides/python/01_table_of_contents.html"></section>
+            <section data-external="slides/python/02_tipos_primitivos.html"></section>
+            <section data-external="slides/python/03_entrada_e_saida.html"></section>
+            <section data-external="slides/python/04_operadores.html"></section>
+            <section data-external="slides/python/05_controle_de_fluxo.html"></section>
+            <section data-external="slides/python/06_mais_sobre_tipos_de_dados.html"></section>
+            <section data-external="slides/python/07_funcoes.html"></section>
+            <section data-external="slides/python/08_modulos_e_scripts.html"></section>
+            <section data-external="slides/python/09_exemplos_de_programas.html"></section>
+            <section data-external="slides/python/10_extra-tips.html"></section>
+
+
+            <!-- <section>
+                 <h2>O que falar agora</h2>
+
+                 <ul>
+                 <li>Arquivos</li>
+                 <li>web
+                 <ul>
+                 <li>requests</li>
+                 <li>beautiful soup</li>
+                 <li>scrappy</li>
+                 <li>flask?</li>
+                 </ul>
+                 </li>
+                 <li>scrapping</li>
+                 <li>machine learning</li>
+                 <li>classes e básico de OO?</li>
+                 <li><a href="https://inventwithpython.com/">https://inventwithpython.com/</a></li>
+                 </ul>
+                 </section> -->
+
+        </div>
+    </div>
+
+    <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script src="node_modules/reveal.js/js/reveal.js"></script>
+
+    <!-- Configure MathJax to add more macros. This must come before MathJax is loaded.
+         Since MathJax is loaded by revealjs, then this script must come before revealjs is initialized
+    -->
+    <script src="js/configure_mathjax.js"></script>
+
+    <script>
+     // More info about config & dependencies:
+     // - https://github.com/hakimel/reveal.js#configuration
+     // - https://github.com/hakimel/reveal.js#dependencies
+     Reveal.initialize({
+         //height: 700, // Default
+         //width: 960,  // Default
+
+         height: 900,
+         width: 1600,
+
+         //height: 768,
+         //width: 1024,
+
+         // * 16/9 -> 1.77777
+         // * 4/3 -> 1.33333
+
+         // Factor of the display size that should remain empty around the
+         // content
+         margin: 0.1,
+
+         // Display the page number of the current slide
+         // Slide number formatting can be configured using these variables:
+         //  "h.v": 	horizontal . vertical slide number (default)
+         //  "h/v": 	horizontal / vertical slide number
+         //    "c": 	flattened slide number
+         //  "c/t": 	flattened slide number / total slides
+         slideNumber: "c/t",
+
+         history: true,
+
+         // Turns fragments on and off globally
+         fragments: true,
+
+         // Hides the address bar on mobile devices
+         hideAddressBar: true,
+
+         // Transition style
+         transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+         // Transition speed
+         transitionSpeed: 'default', // default/fast/slow
+
+         // Transition style for full page slide backgrounds
+         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+         // Number of slides away from the current that are visible
+         viewDistance: 3,
+
+         zoomKey: 'shift',
+
+         zoomPan: false,
+
+         /* center: false, */
+         /*vertically center slides using js (default true) */
+
+         // Uncoment in order to use locally installed MathJax
+         /* math: {
+		    mathjax: 'node_modules/mathjax/MathJax.js', //offline-local
+	        }, */
+
+         external: {
+             // Set this to false!
+             // You get a warning in the browser console, but if the plugin run asynchronously then if might mess change the current slide when you refresh the page
+             async: false
+         },
+
+         menu: {
+             numbers: true,
+             themes: true,
+             themesPath: 'node_modules/reveal.js/css/theme/',
+             transitions: true
+             /* custom: [
+                { title: 'Custom', icon: '<i class="fa fa-bookmark">', src: 'links.html' },
+                ] */
+         },
+
+         // Plugin to add js visualization to the presentation (not just d3)
+         // https://github.com/gcalmettes/reveal.js-d3
+         reveald3: {
+             // This will prefix the path attributes of the source html paths with the given path.
+             // (by default "src" if set to true or with the specified path if string)
+             mapPath: false, // true / false / "spefific/path/as/string", default: false
+         },
+
+         // Note: Other inetresting plugins to test:
+         //   code-focus
+         //   plugins to add D3, charts, etc
+
+         dependencies: [{
+             src: 'node_modules/reveal.js/plugin/markdown/marked.js'
+         },
+                        {
+                            src: 'node_modules/reveal.js/plugin/markdown/markdown.js'
+                        },
+                        {
+                            src: 'node_modules/reveal.js/plugin/notes/notes.js',
+                            async: true
+                        },
+                        {
+                            src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
+                            async: true,
+                            callback: function() {
+                                hljs.initHighlightingOnLoad();
+                            }
+                        },
+                        {
+                            src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js',
+                            async: true
+                        },
+                        {
+                            src: 'node_modules/reveal.js/plugin/math/math.js',
+                            async: true
+                        },
+                        {
+                            src: 'node_modules/reveal.js-menu/menu.js',
+                            async: true
+                        },
+                        {
+                            src: 'node_modules/reveald3/reveald3.js',
+                            async: false
+                        },
+                        /* {
+                         *     src: 'plugin/zero-index-main.js',
+                         *     async: true
+                         * }, */
+                        /* See https://github.com/janschoepke/reveal_external */
+                        {
+                            src: 'plugin/external.js',
+                            condition: function() {
+                                return !!document.querySelector('[data-external],[data-external-replace]');
+                            }
+                        },
+                        {
+                            src: 'plugin/pdfexport.js'
+                        }, // Press the 'E' key and the print to PDF from Chrome
+                        // Note: The title_footer.initialize function can take two parameters:
+                        //   title: the title to show in the footer; if null, it will take the h1, h2 and h3 elements of the first slide.
+                        //   background: a string of the form 'rgba(0,255,0,0.1)', for the background colour of the footer.
+                        {
+                            src: 'plugin/title-footer/title-footer.js',
+                            async: true,
+                            callback: function() {
+                                title_footer.initialize("Introdução ao Python");
+                            }
+                        },
+         ]
+     });
+    </script>
+
+    <!-- <script src="js/my_tests.js"></script> -->
+</body>
+
+</html>=

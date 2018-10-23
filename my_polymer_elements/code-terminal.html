@@ -1,0 +1,91 @@
+<link rel="import"  href="../bower_components/polymer/polymer.html">
+<link rel="import" href="./terminal-tag.html">
+
+<dom-module id="code-terminal">
+    <style>
+     /* Sobrescreve o que a biblioteca highlight.js seta caso eu coloque a
+        classe 'terminal' */
+     code {
+         background-color: #272822 !important;
+     }
+
+     :host {
+         display: inline-block;
+         counter-reset: ipython-in;
+     }
+
+     terminal-tag code {
+         white-space:pre-line;
+     }
+
+     code ::slotted(in), code ::slotted(* in) {
+         margin-top: 10px;
+         display: inline-block;
+         white-space: pre;
+     }
+
+     code ::slotted(output), code ::slotted(* output) {
+         white-space: pre;
+     }
+     code>::slotted(in):first-of-type {
+         margin-top: 0px;
+     }
+
+     :host code ::slotted(in):before, :host code ::slotted(* in):before {
+         counter-increment: ipython-in;
+         content: "In  [" counter(ipython-in) "]: ";
+         color:#17ff2e;
+         white-space:pre;
+     }
+
+     :host code ::slotted(output):before, :host code ::slotted(* output):before {
+         content: "Out [" counter(ipython-in) "]: ";
+         color:#ff2c2d;
+         white-space:pre;
+     }
+
+     .cursor {
+         animation: blink 1s infinite;
+         font-size: 1.2em !important;
+     }
+
+     @keyframes blink{
+         /* to{opacity: .0;} */
+         0%{opacity: 1;}
+         49%{opacity: 1;}
+         50%{opacity: 0;}
+         100%{opacity: 0;}
+     }
+    </style>
+
+    <template>
+        <terminal-tag hostname="{{hostname}}"><code id="code" class$="{{codeclass}}" data-noescape><content></content></code></terminal-tag>
+    </template>
+
+    <script>
+     Polymer({
+         is: "code-terminal",
+         properties: {
+             // declare the hostname property
+             hostname: {
+                 type: String,
+                 value: "darlan@darlan-notebook"
+             },
+             codeclass: {
+                 type: String,
+                 value: "python"
+             },
+             dontshowcursor: Boolean,
+         },
+         ready: function() {
+             if (this.attributes.getNamedItem("dontshowcursor") === null) {
+                 var final_in = document.createElement("in");
+                 final_in.innerHTML = "<cursor-tag></cursor-tag>";
+                 final_in.style = "display: block;"
+                 this.$.code.appendChild(final_in);
+             }
+         }
+     });
+    </script>
+
+</dom-module>

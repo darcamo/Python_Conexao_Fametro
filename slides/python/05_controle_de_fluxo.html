@@ -1,0 +1,62 @@
+
+<section id="controle_de_fluxo">
+    <h1>Controle de Fluxo em Python</h1>
+</section>
+
+<section>
+    <h2>Estruturas Condicionais</h2>
+
+    <ul>
+        <li>O escopo em Python é controlado por <span class="happy alert">indentação</span></li>
+        <li class="fragment">Python possui as estruturas condicionais <code>if</code>, <code>else</code> e <code>elif</code>
+            <ul>
+                <li><code>elif</code> corresponde a um <code>else</code> seguido de um <code>if</code> e existe para evitar indentação excessiva</li>
+            </ul></li>
+    </ul>
+
+    <pre><code class="python" data-external="code/condicional.py"></code></pre>
+
+    <div class="moody labeled box fragment">
+        <div class="label">Nota</div>
+        Não existe "switch case" em Python, mas temos uma alternativa utilizando dicionários (veremos mais adiante)
+    </div>
+
+</section>
+
+<section>
+    <h2>Estruturas de Repetição</h2>
+
+    <ul>
+        <li>O <code>for</code> em Python difere do <code>for</code> em
+            C/C++</li>
+        <li>Em Python ele itera através dos
+            <span class="happy alert">itens de uma sequência</span>
+            (uma lista, uma string, etc) na ordem em
+            que eles aparecem
+            <pre><code class="python" data-external="code/repeticao_for.py"></code></pre></li>
+        <li class="fragment">Para iterar em uma sequência de números use <code>range</code>
+            <pre><code class="python" data-external="code/range.py"></code></pre>
+
+            <code-terminal><in>for i in range(5, 8):
+    ...:     print(i**2)</in>
+25
+36
+49</code-terminal></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Estruturas de Repetição</h2>
+
+    <ul>
+        <li>Também temos <code>while</code> em Python, que funciona de forma semelhante ao C/C++
+            <pre><code class="python" data-external="code/repeticao_while.py"></code></pre></li>
+    </ul>
+
+    <div class="moody labeled box fragment">
+        <div class="label">Nota</div>
+        Em um bloco de código (corpo de um <code>if</code>, <code>for</code>, <code>while</code>, etc) podemos usar <code>pass</code> para não <em>fazer nada</em>
+        <pre><code class=python">if True:
+    pass</code></pre>
+    </div>
+</section>
